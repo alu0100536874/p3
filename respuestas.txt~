@@ -6,7 +6,60 @@ Helloworld
 2.0.0p247 :002 > 
 
 
-19.
+20.
+
+2.0.0p247 :001 > puts "Hola Mundo"
+Hola Mundo
+ => nil 
+2.0.0p247 :002 > 
+
+
+21.
+
+alu4077@cc205:~/datos/homes.rala/LPP/p3$ ruby helloworld.rb
+Hola Mundo
+
+
+26.
+
+alu4077@cc205:~/datos/homes.rala/LPP/p3$ ruby byebyeWorld.rb
+
+From: /home/alu4077/datos/homes.rala/LPP/p3/byebyeWorld.rb @ line 11 :
+
+     6:   
+     7: #set x to 10
+     8:   x = 10
+     9:   
+    10: #start a PELP session
+ => 11:  binding.pry
+    12:  
+    13: #program resumes here (after pry session)
+    14:  puts "program resumes here. Value of x is: #{x}."
+
+[1] pry(main)> x
+=> 10
+
+[4] pry(main)> def hello
+[4] pry(main)*   puts "Hello world"
+[4] pry(main)* end  
+=> nil
+
+[5] pry(main)> hello
+Hello world
+=> nil
+
+[6] pry(main)> byebye
+bye bye world!!!
+=> nil
+
+[7] pry(main)> x = "changed"
+=> "changed"
+
+[8] pry(main)> exit
+program resumes here. Value of x is: changed.
+
+
+
 
 
 
