@@ -59,6 +59,150 @@ bye bye world!!!
 program resumes here. Value of x is: changed.
 
 
+27. El irb permite ejecutar nuestro programa inmediatemente (interpretarlo a tiempo de ejecucción). Mientras con pry es un consola interativa de ruby.
+
+
+34
+Imprime caracteres
+[1] pry(main)> "\t\n"
+=> "\t\n"
+
+Hace un salto de tabulador y a continuación de linea.
+[2] pry(main)> '\t\n'
+=> "\\t\\n"
+ 
+
+35.
+Imprime la linea y acontinuación dos salto de linea, imprime el string tal cual
+[3] pry(main)> %q{hello world\n}
+=> "hello world\\n"
+[4] pry(main)> %q{'a''b''c'}
+=> "'a''b''c'"
+
+
+36.
+Imprime la linea y acontinuación  salto de linea INTERPOLADA
+[5] pry(main)> %Q{hello world\n}
+=> "hello world\n"
+[6] pry(main)> %Q{'a''b''c'}
+=> "'a''b''c'"
+
+
+37.
+=> "\"--4--\n\"--2--\n"
+
+
+38.
+=> "'--4--\n'--2--\n"
+
+
+39.
+
+[18] pry(main)> s = "hello"
+=> "hello"
+[19] pry(main)> s[0,2]
+=> "he"
+[21] pry(main)> s[-1,1]
+=> "o"
+[22] pry(main)> s[0,10]
+=> "hello"
+
+
+40.
+=> "hello world"
+
+
+41.
+=> "..."
+
+
+42.
+=> "222"
+
+
+43. Un array
+=> ["this", "is", "a", "test"]
+
+
+44.
+=> ["\\t", "\\n"]
+
+
+45.
+=> ["\t", "\n"]
+
+
+46. Un Array vacio
+=> [nil, nil, nil]
+
+
+47. Un Array vacio
+=> [nil, nil, nil]
+
+
+48.
+[7] pry(main)> b
+=> [[1, 2], [3, 4]]
+
+49.
+[9] pry(main)> c
+=> [0, 2, 4]
+
+
+50.
+[1] pry(main)> a = ('a'..'e').to_a
+=> ["a", "b", "c", "d", "e"]
+[2] pry(main)> a[1,1]
+=> ["b"]
+[3] pry(main)> a[-2,2]
+=> ["d", "e"]
+[4] pry(main)> a[0..2]
+=> ["a", "b", "c"]
+[5] pry(main)> a[0...1]
+=> ["a"]
+[6] pry(main)> a[-2..1]
+=> []
+
+
+51.
+[7] pry(main)> a[0,2] = %w{A,B}
+=> ["A,B"]
+[8] pry(main)> a
+=> ["A,B", "c", "d", "e"]
+[9] pry(main)> a[2..5] = %w{C, D, E}
+=> ["C,", "D,", "E"]
+[10] pry(main)> a
+=> ["A,B", "c", "C,", "D,", "E"]
+[11] pry(main)> a[0,0] = [1,2,3]
+=> [1, 2, 3]
+[12] pry(main)> a[0,2] = []
+=> []
+[13] pry(main)> a
+=> [3, "A,B", "c", "C,", "D,", "E"]
+[14] pry(main)> a[-1,1]= ['Z']
+=> ["Z"]
+[15] pry(main)> a
+=> [3, "A,B", "c", "C,", "D,", "Z"]
+[16] pry(main)> a[-2,2] = nil
+=> nil
+[17] pry(main)> a
+=> [3, "A,B", "c", "C,", nil]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
