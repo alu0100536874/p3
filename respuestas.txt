@@ -248,6 +248,127 @@ from (pry):5:in `+'
 
 
 57.
+irb(main):004:0* a = 1..10
+=> 1..10
+irb(main):005:0> a.class
+=> Range
+irb(main):006:0> a.to_a
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+irb(main):007:0> b = 1...10
+=> 1...10
+irb(main):008:0> b.to_a
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+58.
+irb(main):001:0> r = 0...100
+=> 0...100
+irb(main):002:0> r.member? 50
+=> true
+irb(main):003:0> r.member? 99.9
+=> true
+
+
+59.
+irb(main):004:0> true.class
+=> TrueClass
+irb(main):005:0> false.class
+=> FalseClass
+irb(main):006:0> puts "hello" if 0
+hello
+=> nil
+irb(main):007:0> puts "hello" if nil
+=> nil
+irb(main):008:0> puts "hello" if ""
+(irb):8: warning: string literal in condition
+hello
+=> nil
+
+
+60.
+irb(main):001:0> x = :syn
+=> :syn
+irb(main):002:0> x.class
+=> Symbol
+irb(main):003:0> x == 'syn'
+=> false
+irb(main):004:0> x == :syn
+=> true
+irb(main):005:0> z = :'a long symbol'
+=> :"a long symbol"
+irb(main):006:0> z.class
+=> Symbol
+irb(main):009:0> x == 'syn'.to_syn
+NoMethodError: undefined method `to_syn' for "syn":String
+	from (irb):9
+	from :0
+irb(main):010:0> x.to_s == 'syn'
+=> true
+
+
+61.
+irb(main):011:0> s = "Ruby"
+=> "Ruby"
+irb(main):012:0> t = s
+=> "Ruby"
+irb(main):013:0> t[-1]
+=> 121
+irb(main):014:0> print s
+Ruby=> nil
+irb(main):015:0> t = "Java"
+=> "Java"
+irb(main):016:0> print s, t
+RubyJava=> nil
+
+
+63.
+irb(main):001:0> x, y = 4, 5
+=> [4, 5]
+irb(main):002:0> z = x > y ? x:y
+=> 5
+irb(main):003:0> x, y , z = [1,2,3]
+=> [1, 2, 3]
+
+
+64.
+irb(main):004:0> x = {:a => 1, :b=> 2}
+=> {:b=>2, :a=>1}
+irb(main):005:0> x.keys
+=> [:b, :a]
+irb(main):006:0> x.values
+=> [2, 1]
+irb(main):007:0> x[:c] = 3
+=> 3
+irb(main):008:0> x
+=> {:b=>2, :c=>3, :a=>1}
+irb(main):009:0> x.delete('a')
+=> nil
+irb(main):010:0> x
+=> {:b=>2, :c=>3, :a=>1}
+irb(main):011:0> x.delete(:a)
+=> 1
+irb(main):012:0> 1
+=> 1
+irb(main):013:0> x
+=> {:b=>2, :c=>3}
+irb(main):014:0> x = { :a=> 1, :b=> 2, :c=> 4}
+=> {:b=>2, :c=>4, :a=>1}
+irb(main):015:0> x.delete_if {|k,v| v% 2 == 0}
+=> {:a=>1}
+irb(main):016:0> x
+=> {:a=>1}
+
+
+65.
+irb(main):017:0> counts = Hash.new(0)
+=> {}
+
+
+66.
+irb(main):018:0> 'hello world, hello LPP' .scan /\w+/
+=> ["hello", "world", "hello", "LPP"]
+
+
 
 
 
